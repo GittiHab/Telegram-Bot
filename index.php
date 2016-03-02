@@ -14,7 +14,7 @@ require './advanced/class.session.php';
 
 require './class.telegram.php';
 $bot = new Telegram(TOKEN, NAME);
-$DB = new \System\Database\MySQL(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_NAME);
+// $DB = new \System\Database\MySQL(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_NAME);
 
 // Incoming update
 $request = json_decode(file_get_contents('php://input'), true);
