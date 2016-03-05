@@ -1,4 +1,6 @@
 <?php
+// Published under the MIT License, Copyright (c) 2015 Pius Ladenburger
+
 class Telegram {
 	private $token, $name;
 	

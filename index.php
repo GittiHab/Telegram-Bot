@@ -1,4 +1,6 @@
 <?php
+// Published under the MIT License, Copyright (c) 2015 Pius Ladenburger
+
 /* Telegram Bot Info */
 define('TOKEN', 'TOKE_RECEIVED_FROM_TELEGRAM');
 define('NAME', 'BOT_NAME');
