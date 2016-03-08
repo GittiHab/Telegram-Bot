@@ -28,7 +28,7 @@ class Session {
 	* @param $key The index of the value
 	*/
 	public function get($key) {
-		return (isset($this->data[$key]))? $this->data[$key]['Content']:false;
+		return (isset($this->data[$key]))? ($this->data[$key]['array'])? json_decode($this->data[$key]['Content'], true):$this->data[$key]['Content']:false;
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class Session {
 	*/
 	private function insert($key, $content) {
 		$array = (is_array($content))? 1:0;
-		$content = ($array === 1)? json_encode($content):content;
+		$content = ($array === 1)? json_encode($content):$content;
 		return $this->db->query('INSERT INTO `Session` (`Bot`, `Chat`, `Key`, `Content`, `Array`) VALUES ("' . $this->db->esc($this->name) . '", "' . $this->db->esc($this->chat) . '", "' . $this->db->esc($key) . '", "' . $this->db->esc($content) . '", "' . $array . '")');
 	}
 	
@@ -57,7 +57,7 @@ class Session {
 	*/
 	private function update($id, $content) {
 		$array = (is_array($content))? 1:0;
-		$content = ($array === 1)? json_encode($content):content;
+		$content = ($array === 1)? json_encode($content):$content;
 		return $this->db->query('UPDATE `Session` SET `Content` = "' . $this->db->esc($content) . '", `Array` = "' . $array . '" WHERE `ID` = "' . $this->db->esc($id) . '"');
 	}
 }
