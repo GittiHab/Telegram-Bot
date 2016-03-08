@@ -28,7 +28,7 @@ class Session {
 	* @param $key The index of the value
 	*/
 	public function get($key) {
-		return (isset($this->data[$key]))? ($this->data[$key]['array'])? json_decode($this->data[$key]['Content'], true):$this->data[$key]['Content']:false;
+		return (isset($this->data[$key]))? ($this->data[$key]['Array'])? json_decode($this->data[$key]['Content'], true):$this->data[$key]['Content']:false;
 	}
 	
 	/**
