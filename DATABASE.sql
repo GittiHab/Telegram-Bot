@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `Log` (
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Type` varchar(32) COLLATE latin1_german1_ci DEFAULT NULL,
   `Message` text COLLATE latin1_german1_ci
-) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 CREATE TABLE IF NOT EXISTS `Session` (
 `ID` int(11) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `Session` (
   `Key` varchar(32) COLLATE latin1_german1_ci NOT NULL,
   `Content` text COLLATE latin1_german1_ci NOT NULL,
   `Array` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 
 ALTER TABLE `Log`
